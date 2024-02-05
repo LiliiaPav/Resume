@@ -15,6 +15,7 @@
     --spacer-dbl: 2rem;
     }
 
+
 /* GLOBAL STYLES
 --------------------------------*/
 html{
@@ -258,15 +259,12 @@ footer li{
     h1{
         line-height: 3rem;
     }
+
     .work-item{
         display: flex;
         flex-direction: column;
         gap: 0;
     }
-    h4{
-        font-size: 1.1rem;
-    }
-
 }
 
 @media screen and (max-width: 400px){
