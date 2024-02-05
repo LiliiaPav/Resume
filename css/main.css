@@ -2,14 +2,6 @@
     /*---------typography-----------*/
     --primary-font: 'Open Sans', sans-serif;;
     --headline-font: 'Baskervville', serif;
-    /*--fw-l:100;
-    --fw-m:400;
-    --fw-b:600;
-    --fs-base: 10px;
-    --fs-sub: 1.8rem;
-    --fs-h1: 3.6rem;
-    --fs-p: 1.6rem;
-    --line-h: 1.5; */
     
     /*---------colors-----------*/
     --primary-color:  #8C2323;
@@ -20,17 +12,8 @@
 
     /*---------helper-----------*/
     --spacer: 1rem;
-    --spacer-dbl: 2rem;/*
-    --spacer-thr: 3rem;
-    --border-radius: 6px;
-    --shadow: 1px 1px 3px #D9C2BA;
-    --inner-shadow: 3px 3px 3px rgba(255,255,255,.2), 0 0 var(--tetriary-color);
-    --border: solid 15px var(--primary-color);
-    --form-border: solid 1px rgba(241,79,116,.5); */
+    --spacer-dbl: 2rem;
     }
-
-    
-
 
 /* GLOBAL STYLES
 --------------------------------*/
@@ -274,7 +257,17 @@ footer li{
 @media screen and (max-width: 600px){
     h1{
         line-height: 3rem;
-    }}
+    }
+    .work-item{
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+    h4{
+        font-size: 1.1rem;
+    }
+
+}
 
 @media screen and (max-width: 400px){
     h1{
@@ -288,7 +281,7 @@ footer li{
     h3{
         font-size: 1.2rem;
     }
-    .work-item, footer{
+    footer{
         display: flex;
         flex-direction: column;
         gap: 0;
