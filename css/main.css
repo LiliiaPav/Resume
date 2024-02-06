@@ -26,7 +26,7 @@ html{
     box-sizing: inherit;
 }
 
-html, body{ height: 100%;}
+html, body{ height: 100vh ;}
 
 body{
     background-color: var(--neutral-lt-color);
@@ -169,6 +169,7 @@ main.content-wrapper > section section{
 .work-summary p:first-of-type{
     margin-top: 0;
 }
+
 /* Education
 --------------------------------*/
 .content-wrapper>section:last-of-type p{
@@ -184,6 +185,7 @@ footer{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-bottom: 0;
 }
 
 footer a{
@@ -214,9 +216,11 @@ footer li{
 
 @media screen and (max-width: 875px){
     .project-item{
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 20px;
         margin-bottom: var(--spacer-dbl);
+        align-items: start;
     }
 
     .project-item .btn{
@@ -226,11 +230,6 @@ footer li{
 
     .project-item img{
         margin: auto;
-    }
-
-    .project-item h3{
-        text-align: center;
-        margin-top: var(--spacer);
     }
 
     .work-item{
@@ -260,10 +259,37 @@ footer li{
         line-height: 3rem;
     }
 
-    .work-item{
+    .resume header::before{
+        height: 200px;
+    }
+
+    .project-item{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: var(--spacer-dbl);
+    }
+
+    .project-item h3{
+        text-align: center;
+        margin-top: var(--spacer);
+    }
+
+    .work-item, footer{
         display: flex;
         flex-direction: column;
         gap: 0;
+    }
+
+    footer i{
+        margin: 0 10px;
+    }
+
+    footer ul{
+        order: -1;
+    }
+
+    footer p{
+        margin-top: 0;
     }
 }
 
@@ -272,25 +298,15 @@ footer li{
         font-size: 2rem;
         line-height: 2rem;
     }
-    h2{
-        font-size: 1.5rem;
-    }
 
-    h3{
-        font-size: 1.2rem;
-    }
-    footer{
-        display: flex;
-        flex-direction: column;
-        gap: 0;
-    }
+    h2{ font-size: 1.5rem; }
 
-    footer i{
-        margin: 0 10px;
+    h3{ font-size: 1.2rem; }
+}
 
-    }
 
-    footer ul{
-        order: -1;
+@media screen and (max-width: 1200px){
+    .btn.download{
+        position: absolute;
     }
 }
